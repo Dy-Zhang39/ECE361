@@ -1,0 +1,7 @@
+gcc -lm    -c -o server.o server.c
+gcc -lm    -c -o user.o user.c
+gcc -lm    -c -o message.o message.c
+gcc -lm    -c -o deliverHelper.o deliverHelper.c
+gcc -lm   server.o user.o message.o deliverHelper.o   -o server
+gcc -lm    -c -o deliver.o deliver.c
+gcc -lm   deliver.o user.o message.o deliverHelper.o   -o deliver
